@@ -26,8 +26,8 @@ export default function DogViewer() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: MouseEvent) => {
-    const x = (e.clientX / window.innerWidth) * 2 - 5;
-    const y = -(e.clientY / window.innerHeight) * 2 + 5; // Y axis is flipped in WebGL
+    const x = (e.clientX / window.innerWidth) * 2 - 1;
+    const y = -(e.clientY / window.innerHeight) * 2 + 1; // Y axis is flipped in WebGL
     setMouse({ x, y });
   };
 

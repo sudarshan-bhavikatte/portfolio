@@ -36,7 +36,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             key={idx}
             className="text-xs px-2 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200 hover:bg-teal-100 transition-colors duration-200 flex items-center gap-1"
           >
-            <span className="text-sm">{tech.icon}</span>
+            
+      {tech.icon && (
+        <img
+          src={tech.icon}
+          alt={`${tech.name} logo`}
+          className="w-4 h-4"
+        />
+      )}
             {tech.name}
           </span>
         ))}

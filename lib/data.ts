@@ -26,8 +26,8 @@ export const projects: Project[] = [
     ],
     tech: [
       { name: "Rust", icon: "/icons/rust.svg" },
-      { name: "Compiler Design", icon: "⚙️" },
-      { name: "x86 Assembly", icon: "🔧" },
+      { name: "Terminal", icon: "/icons/terminal.svg"},
+      { name: "Markodwn", icon: "/icons/markdown.svg" },
     ],
   },
   {
@@ -41,8 +41,8 @@ export const projects: Project[] = [
     ],
     tech: [
       { name: "C++", icon: "/icons/cpp.svg" },
-      { name: "Compiler Design", icon: "⚙️" },
-      { name: "x86 Assembly", icon: "🔧" },
+      { name: "Compiler Design", icon: "/icons/compiler.svg" },
+      { name: "x86 Assembly", icon: "/icons/assembly.svg" },
     ],
   },
   {
@@ -55,7 +55,7 @@ export const projects: Project[] = [
       "Focused on educational clarity and intuitive learning experience",
     ],
     tech: [
-      { name: "React", icon: "⚛️" },
+      { name: "React", icon: "/icons/react.svg" },
       { name: "JavaScript", icon: "/icons/js.svg" },
       { name: "CSS Animations", icon: "/icons/css.svg" },
     ],
@@ -71,8 +71,8 @@ export const projects: Project[] = [
     ],
     tech: [
       { name: "C++", icon: "/icons/cpp.svg" },
-      { name: "raylib", icon: "🎮" },
-      { name: "Game Development", icon: "🕹️" },
+      { name: "raylib", icon: "/icons/raylib.svg" },
+      { name: "Game Development", icon: "/icons/game.svg" },
     ],
   },
 ]
@@ -87,16 +87,16 @@ export const skills: Skill[] = [
   { name: "HTML", icon: "/icons/html.svg" },
   { name: "CSS", icon: "/icons/css.svg" },
   { name: "React", icon: "/icons/react.svg" },
-  // { name: "Node.js", icon: "/icons/js.svg" },
-  // { name: "Prisma", icon: "🔺" },
+  { name: "Node.js", icon: "/icons/nodejs.svg" },
+  { name: "Prisma", icon: "/icons/prisma.svg" },
   // { name: "JavaFX", icon: "☕" },
-  // { name: "Express", icon: "🚀" },
-  // { name: "raylib", icon: "🎮" },
+  { name: "Express", icon: "/icons/express.svg" },
+  { name: "raylib", icon: "/icons/raylib.svg" },
   { name: "Tailwind CSS", icon: "/icons/tailwind.svg" },
-  // { name: "Data Structures & Algorithms", icon: "🧮" },
+  { name: "Data Structures & Algorithms", icon: "/icons/data.svg" },
   // { name: "Compiler Design", icon: "⚙️" },
   // { name: "Full Stack Development", icon: "🌟" },
   // { name: "Systems Programming", icon: "🖥️" },
   // { name: "Web APIs", icon: "🔗" },
-  // { name: "Terminal Applications", icon: "💻" },
+  { name: "Terminal Applications", icon: "/icons/terminal.svg" },
 ]

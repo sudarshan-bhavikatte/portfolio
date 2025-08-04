@@ -1,14 +1,12 @@
-
 "use client"
 
 import { Mail, MapPin, Github } from "lucide-react"
 import { useState, useEffect } from "react"
 import { greetings } from "@/lib/data"
 import DogViewer from "./dog_head"
-
 export default function Header() {
   const [currentGreeting, setCurrentGreeting] = useState(0)
-
+  const [emoji,setEmoji] = useState(0)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGreeting((prev) => (prev + 1) % greetings.length)
@@ -16,31 +14,52 @@ export default function Header() {
     return () => clearInterval(interval)
   }, [])
 
+
+const energyEmojis = [// fresh and explosive
+  "😄", // very happy
+  "😎", // cool and confident
+  "🙂", // content
+  "😐", // neutral
+  "😶", // expressionless
+  "😒", // unamused
+  "😔", // disappointed
+  "😫", // tired
+  "😩", // weary
+  "😴"  // asleep (most dull)
+];
+
   return (
     <header className="mb-16 animate-fade-in">
       <div className="flex items-start gap-6 mb-6">
-        <div className="">
+        <div className="relative">
+          <div className="w-24 h-50">
           {/* 3D model viewer inside the avatar */}
           <DogViewer />
           {/* <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-teal-500 rounded-full border-2 border-amber-50"></div> */}
         </div>
-
+          {/* <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-teal-500 rounded-full border-2 border-amber-50"></div> */}
+        </div>
         <div className="flex-1">
           <div className="mb-2">
             <span className="text-2xl font-medium text-teal-600 transition-all duration-500">
               {greetings[currentGreeting].text}
             </span>
-            {/* <span className="text-sm text-slate-500 ml-2">({greetings[currentGreeting].lang})</span> */}
+            <span className="text-sm text-slate-500 ml-2">({greetings[currentGreeting].lang})</span>
           </div>
-          <h1 className="text-3xl font-bold text-slate-800 mb-2">{"I'm Sudarshan"}</h1>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <h1 className="text-3xl font-bold text-slate-800 mb-2">{"I'm B Sudarshan"}</h1>
+          <span className="text-lg text-slate-600 leading-relaxed">
             {
-              "A curious student who loves building things with code! I'm passionate about systems programming and full-stack development. Currently looking for internships where I can learn, contribute, and maybe break some code along the way 😄"
+              "A curious student who loves building things with code! I'm passionate about systems programming and full-stack development. Currently looking for internships where I can learn, contribute, and maybe break some code along the way "
             }
-          </p>
+          </span>
+          <span onClick = {
+            () => {
+              if (emoji + 1 == energyEmojis.length) setEmoji(0)
+              else setEmoji(emoji + 1)
+            }
+          }>{energyEmojis[emoji]}</span>
         </div>
       </div>
-
       <div className="flex flex-wrap gap-4 text-sm text-slate-500">
         <div className="flex items-center gap-1 hover:text-teal-600 transition-colors">
           <Mail className="w-4 h-4" />

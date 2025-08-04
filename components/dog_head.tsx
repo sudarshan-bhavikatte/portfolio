@@ -1,28 +1,58 @@
-'use client';
+'use client'
 
 import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
+
 function DogModel({ mouse }: { mouse: { x: number; y: number } }) {
-  const gltf = useGLTF('/models/dog_head.glb');
-  const ref = useRef<THREE.Object3D>(null);
+  const gltf = useGLTF("/models/Duck.glb")
+  const groupRef = useRef<THREE.Group>(null)
+  const modelRef = useRef<THREE.Object3D>(null)
+
+  useEffect(() => {
+    if (modelRef.current) {
+      // Try different rotation combinations to make duck face forward
+      // Option 1: Rotate on Y-axis
+      modelRef.current.rotation.y = -(Math.PI / 2 *1.175)
+      modelRef.current.rotation.x = Math.PI*0.03
+      modelRef.current.rotation.z = -Math.PI*0.08
+
+      // Option 2: If that doesn't work, try rotating on X-axis too
+      // modelRef.current.rotation.x = -Math.PI / 2
+
+      // Option 3: Or try Z-axis rotation
+      // modelRef.current.rotation.z = Math.PI
+
+      console.log("Duck rotation applied:", modelRef.current.rotation)
+    }
+  }, [])
 
   useFrame(({ camera }) => {
-    if (ref.current) {
-      // Convert mouse coords to 3D world position
-      const ndc = new THREE.Vector3(mouse.x, mouse.y, 0.5); // z = 0.5 for halfway between near/far planes
-      ndc.unproject(camera);
+    if (groupRef.current) {
+      const ndc = new THREE.Vector3(mouse.x, mouse.y, 0.5)
+      ndc.unproject(camera)
 
-      ref.current.lookAt(ndc);
+      // Store the original rotation
+      const originalRotation = modelRef.current?.rotation.clone()
+
+      // Apply lookAt to the group, not the model itself
+      groupRef.current.lookAt(ndc)
+
+      // Restore the model's local rotation
+      if (modelRef.current && originalRotation) {
+        modelRef.current.rotation.copy(originalRotation)
+      }
     }
-  });
+  })
 
-  return <primitive ref={ref} object={gltf.scene} scale={0.2} />;
-}
-
-export default function DogViewer() {
+  return (
+    <group ref={groupRef} position={[-1, -1, 0]}>
+      <primitive ref={modelRef} object={gltf.scene} scale={1.5} />
+    </group>
+  )
+}export default function DogViewer() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -37,7 +67,7 @@ export default function DogViewer() {
   }, []);
 
   return (
-    <div className="w-24 h-24">
+    <div className="w-50 h-50">
       <Canvas camera={{ position: [0, 0, 4] }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[2, 2, 2]} />

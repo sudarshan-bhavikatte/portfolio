@@ -1,4 +1,5 @@
 "use client"
+
 import { useState, useEffect } from "react"
 import Header from "@/components/Header"
 import Education from "@/components/Education"
@@ -6,29 +7,35 @@ import Projects from "@/components/Projects"
 import Skills from "@/components/Skills"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import { greetings } from "@/lib/data"
+import { toast } from "sonner"
 
 export default function Portfolio() {
+
   const [currentGreeting, setCurrentGreeting] = useState(0)
-
-  const greetings = [
-    { text: "Hello", lang: "English" },
-    { text: "नमस्ते", lang: "Hindi" },
-    { text: "வணக்கம்", lang: "Tamil" },
-    { text: "నమస్కారం", lang: "Telugu" },
-    { text: "ನమస్కಾర", lang: "Kannada" },
-    { text: "ನమస్కారം", lang: "Malayalam" },
-    { text: "নমস্কার", lang: "Bengali" },
-    { text: "नमस्कार", lang: "Marathi" },
-    { text: "નમસ્તે", lang: "Gujarati" },
-    { text: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", lang: "Punjabi" },
-    { text: "ନମସ୍କାର", lang: "Odia" },
-  ]
-
+  console.log("https://www.youtube.com/embed/xvFZjo5PgG0?autoplay=1&mute=1")
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGreeting((prev) => (prev + 1) % greetings.length)
     }, 2000)
     return () => clearInterval(interval)
+  }, [])
+
+  
+useEffect(() => {
+  const timer = setTimeout(() => {
+    toast.custom((t) => (
+  <div className="w-80 p-4 bg-card border border-primary/20 rounded-xl">
+    <div className="flex items-start gap-3">
+      <div className="w-2 h-2 bg-primary rounded-full mt-2 animate-pulse"></div>
+      <div>
+        <div className="font-semibold text-teal-600">Curious?!</div>
+        <div className="text-sm text-muted-foreground mt-1">Check logs!!</div>
+      </div>
+    </div>
+  </div>
+))  }, 3000);// show toast after 3 seconds
+    return () => clearTimeout(timer)
   }, [])
 
   return (

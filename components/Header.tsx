@@ -4,7 +4,8 @@ import { Mail, MapPin, Github } from "lucide-react"
 import { useState, useEffect } from "react"
 import { greetings } from "@/lib/data"
 import DogViewer from "./dog_head"
-export default function Header() {
+
+export default function Header() { 
   const [currentGreeting, setCurrentGreeting] = useState(0)
   const [emoji,setEmoji] = useState(0)
   useEffect(() => {
@@ -27,6 +28,7 @@ const energyEmojis = [// fresh and explosive
   "😩", // weary
   "😴"  // asleep (most dull)
 ];
+
 
   return (
     <header className="mb-16 animate-fade-in">

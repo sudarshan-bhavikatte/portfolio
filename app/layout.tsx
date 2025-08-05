@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import {ToasterProvider} from "@/components/ToasterProvider"
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'portfolio',
+  description: 'Created with react and nextjs',
 }
 
 export default function RootLayout({
@@ -25,7 +25,10 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ToasterProvider/>
+      </body>
     </html>
   )
 }

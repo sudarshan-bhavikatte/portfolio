@@ -6,7 +6,7 @@ import {ToasterProvider} from "@/components/ToasterProvider"
 
 export const metadata: Metadata = {
   title: 'portfolio',
-  description: 'Created with react and nextjs',
+  description: 'Created with nextjs',
 }
 
 export default function RootLayout({

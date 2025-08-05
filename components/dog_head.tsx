@@ -25,7 +25,7 @@ function DogModel({ mouse }: { mouse: { x: number; y: number } }) {
       // Option 3: Or try Z-axis rotation
       // modelRef.current.rotation.z = Math.PI
 
-      console.log("Duck rotation applied:", modelRef.current.rotation)
+      // console.log("Duck rotation applied:", modelRef.current.rotation)
     }
   }, [])
 

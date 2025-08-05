@@ -10,10 +10,11 @@ import Footer from "@/components/Footer"
 import { greetings } from "@/lib/data"
 import { toast } from "sonner"
 
+console.log("https://boulderbugle.com/qzNkSeVt");
 export default function Portfolio() {
 
   const [currentGreeting, setCurrentGreeting] = useState(0)
-  console.log("https://www.youtube.com/embed/xvFZjo5PgG0?autoplay=1&mute=1")
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGreeting((prev) => (prev + 1) % greetings.length)

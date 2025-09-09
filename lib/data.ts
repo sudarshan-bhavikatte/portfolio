@@ -16,7 +16,7 @@ export const greetings: Greeting[] = [
 
 export const projects: Project[] = [
   {
-    title: "Hydrogen",
+    title: "Compiler from scratch",
     description: "Compiler for a custom language built in C++",
     year: "Jan 2025 - Mar 2025",
     details: [

@@ -80,15 +80,15 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   { name: "C++", icon: "/icons/cpp.svg" },
-  { name: "Rust", icon: "/icons/rust.svg" },
+  // { name: "Rust", icon: "/icons/rust.svg" },
   { name: "JavaScript", icon: "/icons/js.svg" },
   { name: "TypeScript", icon: "/icons/typescript.svg" },
   { name: "Python", icon: "/icons/python.svg" },
   { name: "SQL", icon: "/icons/postgres.svg" },
-  { name: "HTML", icon: "/icons/html.svg" },
-  { name: "CSS", icon: "/icons/css.svg" },
+  // { name: "HTML", icon: "/icons/html.svg" },
+  // { name: "CSS", icon: "/icons/css.svg" },
   { name: "React", icon: "/icons/react.svg" },
-  { name: "Node.js", icon: "/icons/nodejs.svg" },
+  // { name: "Node.js", icon: "/icons/nodejs.svg" },
   { name: "Prisma", icon: "/icons/prisma.svg" },
   // { name: "JavaFX", icon: "☕" },
   { name: "Express", icon: "/icons/express.svg" },
@@ -100,4 +100,6 @@ export const skills: Skill[] = [
   // { name: "Systems Programming", icon: "🖥️" },
   // { name: "Web APIs", icon: "🔗" },
   { name: "Terminal Applications", icon: "/icons/terminal.svg" },
+  {name: "GitHub", icon: "/icons/github.svg"},
+  {name : "Docker" ,icon: "/icons/docker.svg"}
 ]

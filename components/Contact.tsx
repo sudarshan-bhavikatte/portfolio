@@ -22,7 +22,7 @@ export default function Contact() {
           </Button>
         </a>
         <a
-          href="/B_Sudharshan _Resume.pdf"
+          href="/B_Sudharshan_Resume.pdf"
           download
           target="_blank"
           rel="noopener noreferrer"

@@ -16,28 +16,13 @@ export const greetings: Greeting[] = [
 
 export const projects: Project[] = [
   {
-    title: "T-mark",
-    description: "Terminal-based Markdown viewer written in Rust",
-    year: "2025",
-    details: [
-      "Built a fast, terminal-based Markdown viewer in Rust with minimal dependencies.",
-      "Supports headings, code blocks, lists, and inline formatting with clean terminal rendering.",
-      "Enables keyboard navigation and smart text wrapping for an efficient reading experience.",
-    ],
-    tech: [
-      { name: "Rust", icon: "/icons/rust.svg" },
-      { name: "Terminal", icon: "/icons/terminal.svg"},
-      { name: "Markodwn", icon: "/icons/markdown.svg" },
-    ],
-  },
-  {
     title: "Hydrogen",
     description: "Compiler for a custom language built in C++",
-    year: "2024",
+    year: "Jan 2025 - Mar 2025",
     details: [
-      "Designed a compiler that converts high-level code to x86 assembly",
-      "Implemented lexer, parser (recursive descent), and code generation",
-      "Applied compiler concepts like tokenization and AST construction",
+      "Designed and implemented a complete compiler in C++ that translates a simplified high-level language to x86 assembly",
+      "Implemented lexical analysis, parsing (recursive descent), AST construction, semantic checks, and symbol-table management",
+      "Developed code generation for correctness and performance",
     ],
     tech: [
       { name: "C++", icon: "/icons/cpp.svg" },
@@ -46,36 +31,52 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "DSA Visualizer",
-    description: "React project for interactive learning of algorithms and data structures",
-    year: "2025",
+    title: "Neural Network from Scratch",
+    description: "Feedforward neural network built in C++",
+    year: "Aug 2025 - Present",
     details: [
-      "Built a browser-based visualizer to demonstrate common algorithms and data structures",
-      "Used React to implement interactive animations and step-by-step UI transitions",
-      "Focused on educational clarity and intuitive learning experience",
+      "Implemented efficient custom matrix operations, forward/backward propagation, and loss computation",
+      "Developed gradient-descent training with focus on numerical stability and optimization",
+      "Applied modular design to deepen ML and linear algebra skills",
+    ],
+    tech: [
+      { name: "C++", icon: "/icons/cpp.svg" },
+      { name: "Machine Learning", icon: "/icons/ml.svg" },
+      { name: "Matrix Operations", icon: "/icons/matrix.svg" },
+    ],
+  },
+  {
+    title: "Collaborative Whiteboard",
+    description: "Real-time collaborative whiteboard using Next.js, Convex, and Clerk",
+    year: "Aug 2025 - Present",
+    details: [
+      "Built a scalable whiteboard with drawing tools, sticky notes, and real-time sync",
+      "Implemented multi-user presence, optimistic UI updates, and secure authentication",
+      "Designed responsive layout for seamless cross-device collaboration",
+    ],
+    tech: [
+      { name: "Next.js", icon: "/icons/nextjs.svg" },
+      { name: "Convex", icon: "/icons/convex.svg" },
+      { name: "Clerk", icon: "/icons/clerk.svg" },
+    ],
+  },
+  {
+    title: "Sorting & Pathfinding Visualizer",
+    description: "React/Next.js project for interactive learning of algorithms and data structures",
+    year: "June 2025",
+    details: [
+      "Built a real-time web-based visualizer for classic sorting (Quick, Merge, Bubble) and pathfinding algorithms (BFS, Dijkstra, A*)",
+      "Implemented interactive grid/bar graphics with algorithm selection, adjustable speed, and maze generation",
+      "Focused on educational clarity and step-by-step learning experience",
     ],
     tech: [
       { name: "React", icon: "/icons/react.svg" },
       { name: "JavaScript", icon: "/icons/js.svg" },
       { name: "CSS Animations", icon: "/icons/css.svg" },
     ],
-  },
-  {
-    title: "Space Invaders Clone",
-    description: "2D arcade-style game built using C++ and raylib",
-    year: "2024",
-    details: [
-      "Developed a complete 2D arcade game with C++ and raylib",
-      "Implemented game mechanics, collision, and state management",
-      "Designed modular components for scalability and clean structure",
-    ],
-    tech: [
-      { name: "C++", icon: "/icons/cpp.svg" },
-      { name: "raylib", icon: "/icons/raylib.svg" },
-      { name: "Game Development", icon: "/icons/game.svg" },
-    ],
-  },
+  }
 ]
+
 
 export const skills: Skill[] = [
   { name: "C++", icon: "/icons/cpp.svg" },

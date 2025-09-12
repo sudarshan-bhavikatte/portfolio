@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <a href={project.link}>
+    <a href={project.link} className="p-2">
     <div
       className="group cursor-pointer animate-slide-up transition-all duration-300 hover:translate-x-2"
       style={{ animationDelay: `${index * 100}ms` }}

@@ -29,6 +29,7 @@ export const projects: Project[] = [
       { name: "Compiler Design", icon: "/icons/compiler.svg" },
       { name: "x86 Assembly", icon: "/icons/assembly.svg" },
     ],
+    link : "https://github.com/sudarshan-bhavikatte/hydrogen-compiler",
   },
   {
     title: "Neural Network from Scratch",
@@ -44,6 +45,7 @@ export const projects: Project[] = [
       { name: "Machine Learning", icon: "/icons/ml.svg" },
       { name: "Matrix Operations", icon: "/icons/matrix.svg" },
     ],
+    link : "https://github.com/sudarshan-bhavikatte/NeuralNetwork",
   },
   {
     title: "Collaborative Whiteboard",
@@ -59,6 +61,7 @@ export const projects: Project[] = [
       { name: "Convex", icon: "/icons/convex.svg" },
       { name: "Clerk", icon: "/icons/clerk.svg" },
     ],
+    link : "https://github.com/sudarshan-bhavikatte/white-board-collab",
   },
   {
     title: "Sorting & Pathfinding Visualizer",
@@ -74,6 +77,7 @@ export const projects: Project[] = [
       { name: "JavaScript", icon: "/icons/js.svg" },
       { name: "CSS Animations", icon: "/icons/css.svg" },
     ],
+    link : "https://github.com/sudarshan-bhavikatte/visualizer",
   }
 ]
 
